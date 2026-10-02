@@ -1,0 +1,87 @@
+"""Known disposable / temporary email domains.
+
+This is a representative offline list — not an exhaustive feed. The validator
+treats a match as RISKY (not INVALID): disposable addresses do work, they are
+just low quality for long-term contact.
+"""
+
+DISPOSABLE_DOMAINS: frozenset[str] = frozenset(
+    {
+        "mailinator.com",
+        "guerrillamail.com",
+        "guerrillamail.info",
+        "guerrillamail.net",
+        "guerrillamail.org",
+        "sharklasers.com",
+        "grr.la",
+        "guerrillamailblock.com",
+        "pokemail.net",
+        "spam4.me",
+        "tempmail.com",
+        "temp-mail.org",
+        "temp-mail.io",
+        "tmpmail.net",
+        "tmpmail.org",
+        "throwawaymail.com",
+        "10minutemail.com",
+        "10minutemail.co.za",
+        "minutemail.com",
+        "maildrop.cc",
+        "mailnesia.com",
+        "yopmail.com",
+        "yopmail.fr",
+        "yopmail.net",
+        "trashmail.com",
+        "trashmail.net",
+        "trashmail.org",
+        "dispostable.com",
+        "fakeinbox.com",
+        "fakemail.net",
+        "getnada.com",
+        "nada.email",
+        "mailcatch.com",
+        "sharklasers.com",
+        "trashmail.de",
+        "wegwerfemail.de",
+        "wegwerfmail.de",
+        "spamgourmet.com",
+        "mytemp.email",
+        "discard.email",
+        "discardmail.com",
+        "mailnull.com",
+        "spamfree24.org",
+        "tempail.com",
+        "tempr.email",
+        "emailondeck.com",
+        "moakt.com",
+        "mohmal.com",
+        "33mail.com",
+        "jetable.org",
+        "jetable.com",
+        "mailexpire.com",
+        "spamex.com",
+        "courriel-laposte.net",
+        "byom.de",
+        "boun.cr",
+        "bouncr.com",
+        "cool.fr.nf",
+        "courriel.fr.nf",
+        "despammed.com",
+        "letthemeatspam.com",
+        "mailinator2.com",
+        "notmailinator.com",
+        "nowmymail.com",
+        "reallymymail.com",
+        "spamhere.com",
+        "superrito.com",
+        "teleworm.us",
+        "underdog.city",
+        "winner.blackberry.com",
+        "xyz.com",
+    }
+)
+
+
+def is_disposable(domain: str) -> bool:
+    """Return True when the domain is a known throwaway provider."""
+    return domain.lower().strip(".") in DISPOSABLE_DOMAINS

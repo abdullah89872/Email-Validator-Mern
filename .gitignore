@@ -1,0 +1,75 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib618/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed_logs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# Environment secrets — never commit real values
+.env
+.env.local
+.env.*.local
+
+# Uploads / staged files (regenerated at runtime)
+backend/uploads/
+uploads/
+*.csv~
+*.xlsx~
+
+# Local runtime downloads, databases, and diagnostics
+.runtime/
+_*.txt
+
+# Logs
+*.log
+logs/
+_pip*.txt
+_npm*.txt
+
+# Test / coverage caches
+.coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
